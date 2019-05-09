@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { User } from 'src/app/models/user';
 
 @Component({
   selector: 'app-login',
@@ -7,9 +8,23 @@ import { Component, OnInit } from '@angular/core';
 })
 export class LoginComponent implements OnInit {
 
-  constructor() { }
+  clickmessage = '';
+
+  userObj = new User();
+
+  constructor() { 
+
+    this.userObj.email = "test@gmail.com";
+
+  }
 
   ngOnInit() {
   }
+
+  login(){
+    this.clickmessage = "Login Clicked.";
+  }
+
+
 
 }
