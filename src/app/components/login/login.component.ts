@@ -13,9 +13,6 @@ export class LoginComponent implements OnInit {
   userObj = new User();
 
   constructor() { 
-
-    this.userObj.email = "test@gmail.com";
-
   }
 
   ngOnInit() {
@@ -23,8 +20,12 @@ export class LoginComponent implements OnInit {
 
   login(){
     this.clickmessage = "Login Clicked.";
+    
+    alert(this.userObj.email);
+
   }
 
-
+  
+  
 
 }

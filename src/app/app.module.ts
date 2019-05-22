@@ -14,7 +14,6 @@ import { RegisterComponent } from './components/register/register.component';
 @NgModule({
   declarations: [
     AppComponent,
-   
     HeaderComponent,
     SidepanelComponent,
     MheaderComponent,
