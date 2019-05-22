@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { User } from 'src/app/models/user';
+import { UrlSerializer } from '@angular/router';
 
 @Component({
   selector: 'app-login',
@@ -20,8 +21,8 @@ export class LoginComponent implements OnInit {
 
   login(){
     this.clickmessage = "Login Clicked.";
-    
-    alert(this.userObj.email);
+        
+    alert(JSON.stringify(this.userObj));
 
   }
 
