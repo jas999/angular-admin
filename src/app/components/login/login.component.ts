@@ -26,6 +26,10 @@ export class LoginComponent implements OnInit {
 
   }
 
+  log(x){
+    console.log(x);
+  }
+
   
   
 
