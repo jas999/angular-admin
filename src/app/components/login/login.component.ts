@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { User } from 'src/app/models/user';
-import { UrlSerializer } from '@angular/router';
+import { UrlSerializer, Router } from '@angular/router';
 
 @Component({
   selector: 'app-login',
@@ -13,7 +13,7 @@ export class LoginComponent implements OnInit {
 
   userObj = new User();
 
-  constructor() { 
+  constructor(private router: Router) { 
   }
 
   ngOnInit() {
@@ -21,8 +21,10 @@ export class LoginComponent implements OnInit {
 
   login(){
     this.clickmessage = "Login Clicked.";
-        
-    alert(JSON.stringify(this.userObj));
+    this.router.navigateByUrl("/home")   ; 
+   // alert(JSON.stringify(this.userObj));
+
+   
 
   }
 

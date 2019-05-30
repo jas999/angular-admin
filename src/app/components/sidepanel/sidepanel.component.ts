@@ -7,6 +7,11 @@ import { Component, OnInit } from '@angular/core';
 })
 export class SidepanelComponent implements OnInit {
 
+  clicked: string = null;
+
+    sideNavClick(clicked: string): void {
+        this.clicked = this.clicked == clicked ? null : clicked;
+    }
   constructor() { }
 
   ngOnInit() {
