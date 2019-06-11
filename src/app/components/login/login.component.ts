@@ -24,10 +24,10 @@ export class LoginComponent implements OnInit {
 
   login(){
  //   this.clickmessage = "Login Clicked.";
-   // this.router.navigateByUrl("/home")   ; 
+    this.router.navigateByUrl("/home")   ; 
    // alert(JSON.stringify(this.userObj));
 
-   this.loginService.callHTTPService();
+   //this.loginService.callHTTPService();
 
   }
 

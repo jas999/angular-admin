@@ -8,9 +8,9 @@
       <nav class="navbar-sidebar">
           <ul class="list-unstyled navbar__list">
               <li class="has-sub">
-                  <a class="js-arrow" (click)="sideNavClick(clicked)">
+                  <a class="js-arrow">
                       <i class="fas fa-tachometer-alt"></i>Dashboard</a>
-                      <ul *ngIf="showSublist" class="list-unstyled navbar__sub-list js-sub-list">
+                      <ul class="list-unstyled navbar__sub-list js-sub-list">
                       <li>
                           <a href="index.html">Dashboard 1</a>
                       </li>
@@ -34,8 +34,8 @@
                       <i class="fas fa-table"></i>Tables</a>
               </li>
               <li class="active">
-                  <a href="form.html">
-                      <i class="far fa-check-square"></i>Forms</a>
+                  <a routerLink="/users">
+                      <i class="far fa-check-square"></i>Users</a>
               </li>
               <li>
                   <a href="#">

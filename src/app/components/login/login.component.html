@@ -36,12 +36,9 @@
                                             <div class="alert-danger" *ngIf="password.touched && !password.valid">Password is required</div>
                                         </div>
                                         <div class="form-actions form-group">
-                                            <button  (click)="login()" class="btn btn-success btn-sm">Login</button>
+                                            <button  routerLink="/home" class="btn btn-success btn-sm">Login</button>
                                              &nbsp;
-                                            <a  class="btn btn-success btn-sm" routerLink="/register">Register
-                                            
-                                        </a>
-                                          
+                                            <button  routerLink="/register" class="btn btn-success btn-sm">Register</button>
                                         </div>
                                     
                                 </div>
