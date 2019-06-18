@@ -12,7 +12,7 @@ export class UserService {
 
   public getCustomers(){
 
-    return this.http.get<Object[]>(`${this.apiURL}/customers`);
+    return this.http.get<JSON[]>(`${this.apiURL}/customers`);
 
   }
   
