@@ -1,9 +1,9 @@
 export class User {
 
-    id:number;
+    id : number;
+    status : boolean ;
     username:string;
     password:string;
-    email:string
-   
+
     
 }
