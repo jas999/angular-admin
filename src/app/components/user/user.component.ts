@@ -13,9 +13,17 @@ export class UserComponent implements OnInit {
   constructor(private userService : UserService) { }
 
   ngOnInit() {
-
     this.userService.getCustomers().subscribe(data => this.users = data);
+  }
 
+  updateUserStatus(status : boolean){
+    console.log(status);
+    if(status){
+      status = false;
+    }else{
+      status = true ;
+    }   
+    this.userService.updateUserStatus(status)
   }
 
 }

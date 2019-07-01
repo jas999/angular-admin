@@ -46,14 +46,16 @@
                                               
                                               <td>{{userdetails.name}}</td>
                                               <td>{{userdetails.email}}</td>
-                                              <td>{{userdetails.user.status}}</td>
+                                              <td>{{userdetails.user.status}}
+                                                <label class="switch switch-3d switch-primary mr-3">
+                                                  <input type="checkbox" class="switch-input" [attr.checked] = "userdetails.user.status ? 'checked' : null " (change)="updateUserStatus(userdetails.user.status)" >
+                                                  <span class="switch-label"></span>
+                                                  <span class="switch-handle"></span>
+                                                </label>
+                                              </td>
                                               <td class="text-right" [ngStyle]="{'color': userdetails.totalCredit === '$0' ? 'red' : 'black' }">{{userdetails.totalCredit}}</td>
                                               <td>
-                                                  <label class="switch switch-3d switch-primary mr-3">
-                                                      <input type="checkbox" class="switch-input"  ng-checked=" '1' === '1' " >
-                                                      <span class="switch-label"></span>
-                                                      <span class="switch-handle"></span>
-                                                    </label>
+                                                 
 
                                               </td>
                                           </tr>
