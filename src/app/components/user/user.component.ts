@@ -8,7 +8,7 @@ import { UserService } from '../../service/user.service'
 })
 export class UserComponent implements OnInit {
 
- public users = [] ;
+  public users = [] ;
 
   constructor(private userService : UserService) { }
 
@@ -17,13 +17,13 @@ export class UserComponent implements OnInit {
   }
 
   updateUserStatus(status : boolean){
-    console.log(status);
+  
     if(status){
       status = false;
     }else{
       status = true ;
     }   
-    this.userService.updateUserStatus(status)
+    this.userService.updateUserStatus(status).subscribe(error => console.log(error)    );
   }
 
 }

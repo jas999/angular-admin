@@ -7,6 +7,7 @@ import { UserDetails } from '../models/user-details';
 let header = new HttpHeaders();
 header = header.append("UserId", "42");
 header = header.append("ClientId", "1");
+header = header.append("Content-Type","application/json");
 
 @Injectable({
   providedIn: 'root'
@@ -30,12 +31,12 @@ export class UserService {
   }
 
   
-  updateUserStatus(status: boolean) {
-    
-    this.user.status  = false ;
-    this.userd.user = this.user;
-    alert(JSON.stringify(this.userd));
-    return this.httpClient.post(`${this.apiUpdateStatusURL}`, this.userd , {headers : header});
+  public updateUserStatus(status: boolean) : Observable<User> {
+    let obj = {
+      id : "114",
+      status : status
+    }
+    return this.httpClient.post<User>(`${this.apiUpdateStatusURL}`, JSON.stringify(obj) , {headers : header});
   }
   
 }
