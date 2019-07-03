@@ -69,10 +69,83 @@
                   </div>
                   </div>
                   <div class="tab-pane fade" id="nav-profile" role="tabpanel" aria-labelledby="nav-profile-tab">
-                    <p>Raw denim you probably haven't heard of them jean shorts Austin. Nesciunt tofu stumptown aliqua, retro synth
-                      master cleanse. Mustache cliche tempor, williamsburg carles vegan helvetica. Reprehenderit butcher retro keffiyeh
-                      dreamcatcher synth. Cosby sweater eu banh mi, irure terry richardson ex sd. Alip placeat salvia cillum iphone.
-                      Seitan alip s cardigan american apparel, butcher voluptate nisi .</p>
+                    
+                    <div class="col-lg-10">
+                                <div class="card">
+                                    <div class="card-header">
+                                        <strong>Please fill all required fields</strong> 
+                                    </div>
+                                    <div class="card-body card-block">
+                                        <form action="" method="post" enctype="multipart/form-data" class="form-horizontal">
+                                            <div class="row form-group">
+                                                <div class="col col-md-3">
+                                                    <label class=" form-control-label">Username</label>
+                                                </div>
+                                                <div class="col-12 col-md-9">
+                                                     <input type="text" id="username" name="text-input" placeholder="##Username" class="form-control">
+                                                     <small class="form-text text-muted">This will be used to log into the application</small>
+                                                </div>
+                                            </div>
+                                            <div class="row form-group">
+                                                <div class="col col-md-3">
+                                                    <label for="text-input" class=" form-control-label">Email</label>
+                                                </div>
+                                                <div class="col-12 col-md-9">
+                                                    <input type="text" id="email" name="text-input" placeholder="##Email" class="form-control">
+                                                    <small class="form-text text-muted">This is a help text</small>
+                                                </div>
+                                            </div>                                           
+                                            <div class="row form-group">
+                                                <div class="col col-md-3">
+                                                    <label for="password-input" class=" form-control-label">Password</label>
+                                                </div>
+                                                <div class="col-12 col-md-9">
+                                                    <input type="password" id="password" name="password-input" placeholder="Password" class="form-control">
+                                                    <small class="help-block form-text">Please enter a complex password</small>
+                                                </div>
+                                            </div>                                           
+                                            <div class="row form-group">
+                                                <div class="col col-md-3">
+                                                    <label for="textarea-input" class=" form-control-label">Description</label>
+                                                </div>
+                                                <div class="col-12 col-md-9">
+                                                    <textarea name="description" id="textarea-input" rows="9" placeholder="Description" class="form-control"></textarea>
+                                                </div>
+                                            </div>
+                                            <div class="row form-group">
+                                                <div class="col col-md-3">
+                                                    <label for="select" class=" form-control-label">User Type</label>
+                                                </div>
+                                                <div class="col-12 col-md-9">
+                                                    <select name="select" id="select" class="form-control">
+                                                        <option value="0">Please select</option>
+                                                        <option value="1">RESELLER</option>
+                                                        <option value="2">DEALER</option>
+                                                        <option value="3">SUB DEALER</option>
+                                                    </select>
+                                                </div>
+                                            </div>                                           
+                                            
+                                        </form>
+                                    </div>
+                                    <div class="card-footer">
+                                    
+	                                    <div class="form-actions form-group">
+	                                            <button  (click)="addNewUser()" class="btn btn-success btn-sm"> Submit </button>
+	                                             &nbsp;
+	                                            <button type="reset" class="btn btn-danger btn-sm">
+	                                            <i class="fa fa-ban"></i> Reset
+	                                        </button>
+	                                     </div>
+                                    
+                                       
+                                    </div>
+                                </div>
+                                
+                            </div>
+                    
+                    
+                    
                   </div>
                   <div class="tab-pane fade" id="nav-contact" role="tabpanel" aria-labelledby="nav-contact-tab">
                     <p>Raw denim you probably haven't heard of them jean shorts Austin. Nesciunt tofu stumptown aliqua, retro synth
