@@ -16,18 +16,21 @@ header = header.append("Content-Type","application/json");
 
 
 export class UserService {
+  
 
   private userd : UserDetails = new UserDetails();
   private user : User = new User();
   private apiURL :  String  = "http://localhost:8080/cms/user/all";
   private apiUpdateStatusURL :  String  = "http://localhost:8080/cms/user/updatestatus";
+  private apiAddNewUser :  String  = "http://localhost:8080/cms/user/add";
   constructor(private httpClient: HttpClient) { }
   
+  addNewUser(userJSON: string) : Observable<User> {
+    return this.httpClient.post<User>(`${this.apiAddNewUser}`, userJSON , {headers : header});
+  }
 
   public getCustomers() : Observable<User[]>{
-
     return this.httpClient.get<User[]>(`${this.apiURL}`, { headers : header});
-
   }
 
   
